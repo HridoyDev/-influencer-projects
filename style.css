@@ -4,9 +4,11 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/* --------Home section starts-----
+---------------------------------- */
 .container{
     display: flex;
-    padding-left: 40px; 
+    padding-left: 70px; 
 }
 .content{
     margin-bottom: 20px;
@@ -16,6 +18,8 @@ body{
     font-weight: bold;
 }
 .content p{
+    font-size: 16px;
+    font-weight: 600;
     margin-top: 16px;
     width: 800px;
 }
@@ -23,7 +27,7 @@ body{
     margin-bottom: 16px;
 }
 .top-picture img{
-    width: 100%;
+    width: 90%;
 }
 .link-button{
     text-decoration: none;
@@ -37,8 +41,13 @@ body{
     border-radius: 41px;
 }
 
-/* section */
+/* ---------Popular Collection starts---------
+-------------------------------------------- */
 
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .heading-titale{
     font-size: 20px;
     text-align: center;
@@ -52,29 +61,102 @@ body{
     grid-template-columns: repeat( 3, 1fr);
     width: 600px;
     grid-column-gap: 10px;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 .flexbox-content{
     padding: 10px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     width: 250px;
-    margin: 25px 25px;
+    margin: 15px 15px;
     border-radius: 10px;
 }
 .content-info, h1{
     font-size: 24px;
     font-weight: 700;
 }
+h3{
+    font-size: 20px;
+}
 .content-info, p{
     font-size: 12px;
     font-weight: bold;
 }
-
-/* footer section starts */
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+.fa-arrow-right{
+    padding-left: 4px;
+}
+.btn{
+    text-align: right;
+}
+.btn a{
+   color:#E02C6D ;
+   text-decoration: none;
+   margin-right: 226px;
+}
+/*------------Future items starts------
+------------------------------- */
+.flexbox-titale{
+    text-align: center;
+}
+.future-item{
+    display: flex;
+    justify-content: space-around;
+}
+.content-img img{
+    height: 190px;
+    width: 300px;
+    border-radius: 10px;
+}
+.content-detail{
+    text-align: center;
+}
+.content-detail h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+.content-detail p{
+    font-size: 12px;
+    font-weight: bold;
+}
+/*-----------footer section starts---
+------------------------------------*/
 .footer-info{
     width: 100%;
     background-color:#0a0826;
     color: white;
     text-align: center;
     padding: 5px;
+}
+/*------------ Media queries---
+-------------------------- */
+/* mobile device */
+@media  only screen and ( max-width: 600px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .top-picture img{
+        Width: 440px;
+        Height:414px;
+        margin-top: 200px;
+        margin-left: 10px;
+    }
+    .flexbox-contents{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        width: 70%;
+    }
+    .future-item{
+        display: grid;
+        padding-left: 110px;
+        align-items: center;
+    }
 }
